@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroFarmacoLab</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cheesecake&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🧠 NeuroFarmacoLab</h1>
+    <nav>
+      <ul>
+        <li><a href="#mapa-cerebral">Mapa Cerebral</a></li>
+        <li><a href="#organizador">Organizador</a></li>
+        <li><a href="#farmacos">Fármacos</a></li>
+        <li><a href="#diario">Diario de Ideas</a></li>
+        <li><a href="#notas">Apuntes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="mapa-cerebral">
+      <h2>🧠 Mapa Cerebral Interactivo</h2>
+      <div class="cerebro">
+        <!-- Aquí irá el mapa con regiones clicables -->
+        <p>[Mapa cerebral en desarrollo]</p>
+      </div>
+    </section>
+
+    <section id="organizador">
+      <h2>🗂️ Organizador de Proyectos</h2>
+      <div id="organizador-tareas"></div>
+      <button onclick="nuevaTarea()">+ Nueva Tarea</button>
+    </section>
+
+    <section id="farmacos">
+      <h2>💊 Base de Datos de Fármacos</h2>
+      <div id="farmacos-tabla"></div>
+      <button onclick="agregarFarmaco()">+ Agregar Fármaco</button>
+    </section>
+
+    <section id="diario">
+      <h2>📓 Diario de Ideas Científicas</h2>
+      <textarea id="diario-texto" placeholder="Escribe aquí tus ideas..."></textarea>
+      <button onclick="guardarDiario()">Guardar</button>
+    </section>
+
+    <section id="notas">
+      <h2>📝 Notas y Apuntes</h2>
+      <textarea id="notas-texto" placeholder="Escribe tus apuntes aquí..."></textarea>
+      <button onclick="guardarNotas()">Guardar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con 🧪 por ti — Proyecto de Neurofarmacología</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
