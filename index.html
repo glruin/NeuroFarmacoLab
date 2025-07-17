@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1>🧠 NeuroFarmacoLab</h1>
+    <h1 class="titulo-principal">NeuroFarmacoLab</h1>
     <nav>
       <ul>
         <li><a href="#mapa-cerebral">Mapa Cerebral</a></li>
@@ -24,42 +24,58 @@
 
   <main>
     <section id="mapa-cerebral">
-      <h2>🧠 Mapa Cerebral Interactivo</h2>
-      <div class="cerebro">
-        <!-- Aquí irá el mapa con regiones clicables -->
-        <p>[Mapa cerebral en desarrollo]</p>
-      </div>
+      <h2>Mapa Cerebral Interactivo</h2>
+      <svg id="cerebro-svg" viewBox="0 0 500 300">
+        <circle cx="150" cy="150" r="40" fill="#333" stroke="#fff" stroke-width="2" onclick="mostrarInfo('Corteza Prefrontal')"/>
+        <circle cx="250" cy="150" r="40" fill="#444" stroke="#fff" stroke-width="2" onclick="mostrarInfo('Hipocampo')"/>
+        <circle cx="350" cy="150" r="40" fill="#555" stroke="#fff" stroke-width="2" onclick="mostrarInfo('Amígdala')"/>
+      </svg>
+      <div id="info-cerebro"></div>
     </section>
 
     <section id="organizador">
-      <h2>🗂️ Organizador de Proyectos</h2>
+      <h2>Organizador de Proyectos</h2>
       <div id="organizador-tareas"></div>
       <button onclick="nuevaTarea()">+ Nueva Tarea</button>
     </section>
 
     <section id="farmacos">
-      <h2>💊 Base de Datos de Fármacos</h2>
-      <div id="farmacos-tabla"></div>
-      <button onclick="agregarFarmaco()">+ Agregar Fármaco</button>
+      <h2>Base de Datos de Fármacos</h2>
+      <table id="tabla-farmacos">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Receptor / Blanco</th>
+            <th>Mecanismo de Acción</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <input type="text" id="nombreFarmaco" placeholder="Nombre">
+      <input type="text" id="receptorFarmaco" placeholder="Receptor o blanco">
+      <input type="text" id="mecanismoFarmaco" placeholder="Mecanismo de acción">
+      <button onclick="agregarFarmaco()">Agregar Fármaco</button>
     </section>
 
     <section id="diario">
-      <h2>📓 Diario de Ideas Científicas</h2>
+      <h2>Diario de Ideas Científicas</h2>
       <textarea id="diario-texto" placeholder="Escribe aquí tus ideas..."></textarea>
       <button onclick="guardarDiario()">Guardar</button>
     </section>
 
     <section id="notas">
-      <h2>📝 Notas y Apuntes</h2>
+      <h2>Notas y Apuntes</h2>
       <textarea id="notas-texto" placeholder="Escribe tus apuntes aquí..."></textarea>
       <button onclick="guardarNotas()">Guardar</button>
     </section>
   </main>
 
   <footer>
-    <p>Hecho con 🧪 por ti — Proyecto de Neurofarmacología</p>
+     <p>Hecho con 🧪 por ti — Proyecto de Neurofarmacología</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+   
